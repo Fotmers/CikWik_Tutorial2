@@ -16,8 +16,8 @@ MonoBehaviour:
   UserId: 
   IconEntries:
   - Guid: 9c53962885c2c4f449125a979d6ad240
-    IconPath: ZFolderColorLogo.png
-    IconColor: {r: 1, g: 0, b: 0, a: 1}
+    IconPath: AbaseFolder.png
+    IconColor: {r: 1, g: 1, b: 1, a: 1}
     HighlightName: 0
     HighlightChildren: 0
   Entries: []
