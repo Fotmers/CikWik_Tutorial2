@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     
     [Header("References")]
     [SerializeField] private EggCounterUI _eggCounterUI;
+    [SerializeField] private WinLoseUI _winLoseUI;
 
 
     [Header("Settings")]
@@ -41,11 +42,10 @@ public class GameManager : MonoBehaviour
 
         if (_currentEggCount == _maxEggCount)
         {
-            Debug.Log("All eggs collected! You win!");
             _eggCounterUI.SetEggCompleted();
             ChangeGameState(GameState.GameOver);
+            _winLoseUI.OnGameWin();
         }
-        Debug.Log($"Eggs collected: {_currentEggCount}/{_maxEggCount}");
     }
 
     public GameState GetCurrentGameState()
