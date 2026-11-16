@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 163720595}
   - component: {fileID: 163720591}
   - component: {fileID: 163720590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,6 +1233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5bdc61af129ce48b2b0a14b03aa57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerVisualTransform: {fileID: 543450653436099857}
 --- !u!1 &176507420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: 62.5}
+  m_AnchoredPosition: {x: -89.99988, y: 62.5}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &204418004
@@ -4188,7 +4189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -62.5}
+  m_AnchoredPosition: {x: -89.99988, y: -62.5}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &895265934
@@ -4301,7 +4302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 0}
+  m_AnchoredPosition: {x: 89.99988, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &917626069
@@ -6322,6 +6323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 3069463152959289511, guid: 69ef6ec9a0720ab4181a382ad028a657, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c41c61947b472064b8545af77f8cd486, type: 2}
     - target: {fileID: 5370918421120594589, guid: 69ef6ec9a0720ab4181a382ad028a657, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6374,7 +6379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: -125}
+  m_AnchoredPosition: {x: 89.99988, y: -125}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1454051734
@@ -8767,7 +8772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 125}
+  m_AnchoredPosition: {x: 89.99988, y: 125}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2027979853
@@ -8885,6 +8890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5245ed8e064a44eac2d73c6b2ae85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHealthUI: {fileID: 378068516}
   _maxHealth: 3
 --- !u!137 &245042373979049903
 SkinnedMeshRenderer:
@@ -9316,6 +9322,10 @@ PrefabInstance:
     - target: {fileID: 924116998424038086, guid: 231845944e72ec748a9687d07bfd675b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924116998424038086, guid: 231845944e72ec748a9687d07bfd675b, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     - target: {fileID: 2568755392090487216, guid: 231845944e72ec748a9687d07bfd675b, type: 3}
       propertyPath: m_CastShadows

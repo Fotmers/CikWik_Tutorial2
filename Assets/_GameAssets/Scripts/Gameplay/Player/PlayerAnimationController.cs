@@ -7,11 +7,15 @@ public class PlayerAnimationController : MonoBehaviour
 
     private PlayerController _playerController;
     private StateController _stateController;
+
+    private int jumpingHash;
     
     private void Awake()
     {
         _playerController = GetComponent<PlayerController>();
         _stateController = GetComponent<StateController>();
+
+       jumpingHash  = Animator.StringToHash(Consts.PlayerAnimations.IS_JUMPING);
     }  
 
     private void Start()
@@ -33,7 +37,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void PlayerController_OnPlayerJumped()
     {
-        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, true);
+        _playerAnimator.SetBool(jumpingHash, true);
         Invoke(nameof(ResetJumping), 0.6f);
     }
 
