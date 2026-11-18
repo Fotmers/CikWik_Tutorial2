@@ -207,7 +207,6 @@ public class PlayerController : MonoBehaviour
         return _playerRigidbody;
     }
 
-
     #region Helper Functions
 
     private bool IsGrounded()
@@ -223,6 +222,24 @@ public class PlayerController : MonoBehaviour
     private bool IsSliding()
     {
         return _isSliding;
+    }
+
+    public bool CanCatChase()
+    {
+        if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, _playerHeight * 0.5f + 0.2f, _groundLayer))
+        {
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer(Consts.Layers.FLOOR_LAYER))
+            {
+                return true;
+            }
+
+            else if(hit.collider.gameObject.layer == LayerMask.NameToLayer(Consts.Layers.GROUND_LAYER))
+            {
+                return false;
+            }
+        }
+
+        return false;
     }
 
     #endregion
