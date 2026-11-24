@@ -15,14 +15,12 @@ public class PlayerInteractionController : MonoBehaviour
         _playerRigidbody = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)
+private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("collectable") && (other.gameObject.TryGetComponent<ICollectible>(out var collectible)))
+        if (other.TryGetComponent<ICollectible>(out var collectible))
         {
-
             collectible.Collect();
         }
-        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -38,6 +36,7 @@ public class PlayerInteractionController : MonoBehaviour
         if(other.TryGetComponent<IDamageable>(out var damageable))
         {
             damageable.GiveDamage(_playerRigidbody, _playerVisualTransform);
+            CameraShake.Instance.ShakeCamera(1f, 0.5f);
         }
     }
 }
